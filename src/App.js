@@ -11,6 +11,6 @@ const App = (props) => {
     areas: JSON,
   };
 
-  return <ImageMapper src={URL} map={MAP} />;
+  return <ImageMapper src={URL} map={MAP} parentWidth={500} responsive />;
 };
 export default App;
