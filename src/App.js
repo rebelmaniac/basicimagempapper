@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ImageMapper from "react-img-mapper";
+import JSON from "./area.json";
+import image from "./rockWall.jpg";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+  const URL = image;
+  const MAP = {
+    name: "my-map",
+    // GET JSON FROM BELOW URL AS AN EXAMPLE
+    areas: JSON,
+  };
 
+  return <ImageMapper src={URL} map={MAP} />;
+};
 export default App;
